@@ -42,7 +42,18 @@ const server = http.createServer((req, res) => {
             res.writeHead(200, config.head);
             status.status_server = "REQUEST POST OK"
             console.log(status)
-            sendPost(setting, data)
+            if (data.tel.split(',').length > 1) {
+                let tel = data.tel.split(',')
+                console.log(`Multiple send mode: ${tel.join(',')}`)
+                for (let i = 0; i < tel.length; i++) {
+                    data.tel = tel[i]
+                    sendPost(setting, data)
+                }
+                tel = null
+            } else {
+                console.log(`Single Send Mode: ${data.tel}`)
+                sendPost(setting, data)
+            }
             res.end('message send');
             data = null
         }, function(e) {
