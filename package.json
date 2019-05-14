@@ -1,0 +1,15 @@
+{
+  "name": "sms_proxy",
+  "version": "1.0.7",
+  "description": "",
+  "main": "api-server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://git.synesis.ru/alexander.komin/sms_proxy.git"
+  },
+  "author": "Alexandr Komin",
+  "license": "ISC"
+}
