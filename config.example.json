@@ -1,0 +1,19 @@
+{
+    "options" : {
+        "host": "api.smsline.by",
+        "port": 443,
+        "path": "/v3/messages/single/sms",
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "Authorization-User": "sinezis_stratus",
+            "Authorization": ""
+        },
+        "body": {
+            "target": "AlphaName",
+            "msisdn": "",
+            "text": ""
+        }
+    },
+    "api_pass" : "pass"
+}
